@@ -420,14 +420,27 @@ export default function ShareView() {
 
           {/* 範本三件套 */}
           <div className="mt-4 bg-warm-soft rounded-xl p-4">
-            <h3 className="font-bold text-warm-accentDark mb-2">🗂 範本內容速覽</h3>
+            <h3 className="font-bold text-warm-accentDark mb-2">🗂 範本內容速覽（點任一張開啟範本）</h3>
             <div className="grid sm:grid-cols-3 gap-2 text-sm text-warm-ink">
-              <div className="bg-warm-card rounded-lg px-3 py-2 border border-warm-line">📁 專案資料庫｜每個業務一筆</div>
-              <div className="bg-warm-card rounded-lg px-3 py-2 border border-warm-line">✅ 任務資料庫｜每件事一筆</div>
-              <div className="bg-warm-card rounded-lg px-3 py-2 border border-warm-line">📝 會議紀錄｜決議轉任務</div>
-              <div className="bg-warm-card rounded-lg px-3 py-2 border border-warm-line">📘 新進同仁交接手冊</div>
-              <div className="bg-warm-card rounded-lg px-3 py-2 border border-warm-line">📢 學員快速入門</div>
-              <div className="bg-warm-card rounded-lg px-3 py-2 border border-warm-line">⚠️ 資安提醒：敏感資料不上雲</div>
+              {[
+                "📁 專案資料庫｜每個業務一筆",
+                "✅ 任務資料庫｜每件事一筆",
+                "📝 會議紀錄｜決議轉任務",
+                "📘 新進同仁交接手冊",
+                "📢 學員快速入門",
+                "⚠️ 資安提醒：敏感資料不上雲",
+              ].map((label) => (
+                <a
+                  key={label}
+                  href={M.templateUrl}
+                  target="_blank"
+                  rel="noopener"
+                  className="bg-warm-card rounded-lg px-3 py-2 border border-warm-line hover:border-warm-accent hover:bg-warm-soft transition flex items-center justify-between gap-2"
+                >
+                  <span>{label}</span>
+                  <span className="text-warm-accentDark text-xs">↗</span>
+                </a>
+              ))}
             </div>
           </div>
 
