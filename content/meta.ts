@@ -6,8 +6,8 @@ export const workshopMeta = {
   durationLabel: "公務人員最初階 ‧ 31 張投影片 ‧ 從零到上手",
   // QR 與此短網址都指向「可複製的 Notion 範本」，學員掃了直接 Duplicate
   shortUrl: "chennaicheng.notion.site/1150602notion",
-  // 部署後填正式網址，供分享簡報站本身用
-  siteUrl: "notion-starter-20260602.vercel.app/share/notion-qishi-20260602",
+  // 正式網址（分享簡報站本身）
+  siteUrl: "https://notion-starter-20260602.vercel.app/share/notion-qishi-20260602",
   qrSrc:
     "https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=" +
     encodeURIComponent("https://chennaicheng.notion.site/1150602notion"),
