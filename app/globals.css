@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@700;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+
+body {
+  background: #F2F8EE;
+  color: #1C2A20;
+  font-family: "Noto Sans TC", system-ui, sans-serif;
+}
+
+.brush-title {
+  font-family: "Noto Serif TC", serif;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+}
+
+.btn {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  padding: 0.55rem 1rem;
+  border-radius: 0.6rem;
+  font-weight: 600;
+  background: #FFF; color: #1C2A20;
+  border: 1px solid #D8E8CE;
+  transition: all 0.15s;
+}
+.btn:hover { background: #E5F1E2; }
+.btn-primary { background: #3FA15E; color: #FFF; border-color: #3FA15E; }
+.btn-primary:hover { background: #348952; }
+.btn-accent { background: #E5F1E2; color: #1F6B3A; border-color: #C9E2BC; }
+.btn-accent:hover { background: #D6ECCB; }
+
+.ribbon {
+  display: inline-flex; align-items: center;
+  padding: 0.8rem 1.8rem;
+  border-radius: 0.8rem;
+  font-weight: 700;
+  background: #3FA15E; color: #FFF;
+  box-shadow: 0 6px 18px rgba(31,107,58,0.25);
+  transition: all 0.15s;
+}
+.ribbon:hover { background: #348952; transform: translateY(-1px); }
