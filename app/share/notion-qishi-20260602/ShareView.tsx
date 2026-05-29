@@ -420,24 +420,24 @@ export default function ShareView() {
 
           {/* 範本三件套 */}
           <div className="mt-4 bg-warm-soft rounded-xl p-4">
-            <h3 className="font-bold text-warm-accentDark mb-2">🗂 範本內容速覽（點任一張開啟範本）</h3>
+            <h3 className="font-bold text-warm-accentDark mb-2">🗂 範本內容速覽（點各區塊直接開啟）</h3>
             <div className="grid sm:grid-cols-3 gap-2 text-sm text-warm-ink">
               {[
-                "📁 專案資料庫｜每個業務一筆",
-                "✅ 任務資料庫｜每件事一筆",
-                "📝 會議紀錄｜決議轉任務",
-                "📘 新進同仁交接手冊",
-                "📢 學員快速入門",
-                "⚠️ 資安提醒：敏感資料不上雲",
-              ].map((label) => (
+                { label: "📁 專案資料庫｜每個業務一筆", href: "https://chennaicheng.notion.site/6627105bb987411ab5f24cd43004a32b" },
+                { label: "✅ 任務資料庫｜每件事一筆", href: "https://chennaicheng.notion.site/3cde537f39e04e0198b9a6d97f27061c" },
+                { label: "📝 會議紀錄｜決議轉任務", href: "https://chennaicheng.notion.site/2b8e8fbe83a141b480c3394771b34711" },
+                { label: "📘 新進同仁交接手冊", href: "https://chennaicheng.notion.site/35d2d00e283a81519766e57317c8a523" },
+                { label: "📢 學員快速入門", href: "https://chennaicheng.notion.site/35d2d00e283a81b2a085f35092c9b846" },
+                { label: "⚠️ 資安提醒：敏感資料不上雲", href: M.templateUrl },
+              ].map((c) => (
                 <a
-                  key={label}
-                  href={M.templateUrl}
+                  key={c.label}
+                  href={c.href}
                   target="_blank"
                   rel="noopener"
                   className="bg-warm-card rounded-lg px-3 py-2 border border-warm-line hover:border-warm-accent hover:bg-warm-soft transition flex items-center justify-between gap-2"
                 >
-                  <span>{label}</span>
+                  <span>{c.label}</span>
                   <span className="text-warm-accentDark text-xs">↗</span>
                 </a>
               ))}
