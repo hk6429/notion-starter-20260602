@@ -370,6 +370,80 @@ export default function ShareView() {
         </aside>
       </div>
 
+      {/* 講義與資源 */}
+      <section id="resources" className="max-w-7xl mx-auto px-4 pb-12 scroll-mt-4">
+        <div className="bg-warm-card rounded-2xl border border-warm-line p-6">
+          <h2 className="brush-title text-2xl text-warm-accentDark mb-1 border-l-4 border-warm-accent pl-3">
+            📚 講義與資源
+          </h2>
+          <p className="text-sm text-warm-muted mb-5 pl-3">今天用到的所有連結，一次帶走</p>
+
+          <div className="grid md:grid-cols-2 gap-4">
+            {/* 馬上動手 */}
+            <div className="bg-warm-soft rounded-xl p-4">
+              <h3 className="font-bold text-warm-accentDark mb-3">🚀 馬上動手</h3>
+              <ul className="space-y-2 text-sm">
+                <li>
+                  <a href={M.templateUrl} target="_blank" rel="noopener" className="text-warm-accentDark hover:underline font-medium">
+                    今天的範本（複製到你的帳號）↗
+                  </a>
+                  <p className="text-xs text-warm-muted mt-0.5">開啟後點右上角 Duplicate</p>
+                </li>
+                <li>
+                  <a href="https://www.notion.so/signup" target="_blank" rel="noopener" className="text-warm-accentDark hover:underline font-medium">
+                    Notion 免費註冊 ↗
+                  </a>
+                  <p className="text-xs text-warm-muted mt-0.5">用 Email 註冊，個人用途免費版就夠</p>
+                </li>
+              </ul>
+            </div>
+
+            {/* 學更多 */}
+            <div className="bg-warm-soft rounded-xl p-4">
+              <h3 className="font-bold text-warm-accentDark mb-3">📖 想學更多</h3>
+              <ul className="space-y-2 text-sm">
+                <li>
+                  <a href="https://www.notion.so/help" target="_blank" rel="noopener" className="text-warm-accentDark hover:underline font-medium">
+                    Notion 官方說明中心 ↗
+                  </a>
+                  <p className="text-xs text-warm-muted mt-0.5">最初階到進階的官方教學</p>
+                </li>
+                <li>
+                  <a href="https://www.notion.so/help/guides" target="_blank" rel="noopener" className="text-warm-accentDark hover:underline font-medium">
+                    Notion 範例與指南 ↗
+                  </a>
+                  <p className="text-xs text-warm-muted mt-0.5">各種情境的範本參考</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* 範本三件套 */}
+          <div className="mt-4 bg-warm-soft rounded-xl p-4">
+            <h3 className="font-bold text-warm-accentDark mb-2">🗂 範本內容速覽</h3>
+            <div className="grid sm:grid-cols-3 gap-2 text-sm text-warm-ink">
+              <div className="bg-warm-card rounded-lg px-3 py-2 border border-warm-line">📁 專案資料庫｜每個業務一筆</div>
+              <div className="bg-warm-card rounded-lg px-3 py-2 border border-warm-line">✅ 任務資料庫｜每件事一筆</div>
+              <div className="bg-warm-card rounded-lg px-3 py-2 border border-warm-line">📝 會議紀錄｜決議轉任務</div>
+              <div className="bg-warm-card rounded-lg px-3 py-2 border border-warm-line">📘 新進同仁交接手冊</div>
+              <div className="bg-warm-card rounded-lg px-3 py-2 border border-warm-line">📢 學員快速入門</div>
+              <div className="bg-warm-card rounded-lg px-3 py-2 border border-warm-line">⚠️ 資安提醒：敏感資料不上雲</div>
+            </div>
+          </div>
+
+          {/* 聯絡 */}
+          <div className="mt-4 flex flex-wrap gap-3 items-center text-sm">
+            <span className="text-warm-muted">有問題歡迎找我：</span>
+            <a href={M.fbUrl} target="_blank" rel="noopener" className="text-warm-accentDark hover:underline font-medium">
+              📘 大乃老師 Facebook ↗
+            </a>
+            <a href={`/share/notion-qishi-20260602/detail`} className="text-warm-accentDark hover:underline font-medium">
+              📋 完整講義頁
+            </a>
+          </div>
+        </div>
+      </section>
+
       <footer className="text-center py-12 text-warm-muted text-sm border-t border-warm-line mt-8">
         <p>{M.presenter} ‧ {M.role}</p>
         <p className="text-xs mt-2 opacity-70">行動雲端力研習｜Notion 起手式 ‧ 2026.06.02 線上</p>
